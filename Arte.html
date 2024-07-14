@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Studio MX</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Encabezado fijo con opciones de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de inicio con el logo -->
+    <section id="inicio" class="seccion full-screen">
+        <div class="bienvenida">
+            <img src="https://i.imgur.com/3hwpZnV.jpg" alt="Logo" class="logo-grande" onclick="openAboutPopup()">
+        </div>
+    </section>
+
+    <!-- Sección de actividades con un collage de imágenes -->
+    <section id="actividades" class="seccion full-screen">
+        <div class="collage-container">
+            <div class="actividad" data-descripcion="Descripción de Pintar Totebag">
+                <h3>Totebag</h3>
+                <img src="https://i.imgur.com/VQDwyC1.jpeg" alt="Pintar Totebag">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Mini Canvas">
+                <h3>Mini Canvas</h3>
+                <img src="https://i.imgur.com/T4SEOer.jpeg" alt="Mini Canvas">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Puntillismo">
+                <h3>Puntillismo</h3>
+                <img src="https://i.imgur.com/I94voyQ.jpeg" alt="Puntillismo">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Papel Mache">
+                <h3>Papel Mache</h3>
+                <img src="https://i.imgur.com/OcZhAJi.jpeg" alt="Papel Mache">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Estambre">
+                <h3>Estambre</h3>
+                <img src="https://i.imgur.com/h4LHVX7.jpeg" alt="Estambre">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Relieve">
+                <h3>Relieve</h3>
+                <img src="https://i.imgur.com/7ZBq2ZK.jpeg" alt="Relieve">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Hilorama">
+                <h3>Hilorama</h3>
+                <img src="https://i.imgur.com/wtludlH.jpeg" alt="Hilorama">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Portaincienso">
+                <h3>Portaincienso</h3>
+                <img src="https://i.imgur.com/gKD0Afi.jpeg" alt="Portaincienso">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Colgantes">
+                <h3>Colgantes</h3>
+                <img src="https://i.imgur.com/riKmLzQ.jpeg" alt="Colgantes">
+            </div>
+            <div class="actividad" data-descripcion="Descripción de Esculpismo">
+                <h3>Esculpismo</h3>
+                <img src="https://i.imgur.com/8crKj60.jpeg" alt="Esculpismo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto con título y botones de redes sociales -->
+    <section id="contacto" class="seccion full-screen">
+        <div class="contact-buttons">
+            <button onclick="window.open('https://instagram.com/tu_pagina', '_blank')">Instagram</button>
+            <button onclick="window.open('https://tiktok.com/tu_pagina', '_blank')">Tiktok</button>
+            <button onclick="window.open('https://wa.me/tu_numero', '_blank')">WhatsApp</button>
+            <button onclick="openEmailPopup()">Correo</button>
+        </div>
+    </section>
+
+    <!-- Pop-up de correo -->
+    <div id="email-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>Enviar Mensaje</h3>
+            <form action="submit_form.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Arte y Creatividad. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Pop-up genérico -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3 id="popup-title"></h3>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
+    <!-- Pop-up de 'Quiénes Somos' -->
+    <div id="about-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h3>QUIÉNES SOMOS</h3>
+            <p>Descripción de la empresa...</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
